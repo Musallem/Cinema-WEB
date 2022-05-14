@@ -1,0 +1,62 @@
+.seats-container {
+    height: 900px;
+    width: 550px;
+    position: relative;
+    top: 125px;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.col {
+    display: flex;
+}
+.screen {
+    width: 500px;
+    height: 6px;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+}
+
+.chk {
+    appearance: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: blue;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.chk::after {
+    content: attr(data-seat);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -8px;
+    color: black;
+}.chk:checked {
+    background-color: blueviolet;
+}
+.unavailable {
+    appearance: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: grey;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.unavailable::after {
+    content: attr(data-seat);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -8px;
+    color: black;
+}
